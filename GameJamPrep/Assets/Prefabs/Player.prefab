@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3449748680871284597}
   - component: {fileID: 3449748680871284594}
   - component: {fileID: 3449748680871284595}
+  - component: {fileID: 238440863}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,6 +71,19 @@ MonoBehaviour:
   moveSmoothTime: 0.3
   mouseSmoothTime: 0.03
   lockCursor: 1
+--- !u!114 &238440863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449748680871284592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6542638de36c6b848b23c06421805e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!1 &3449748681253332531
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,6 +95,7 @@ GameObject:
   - component: {fileID: 3449748681253332530}
   - component: {fileID: 3449748681253332532}
   - component: {fileID: 3449748681253332533}
+  - component: {fileID: 2010857318}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -153,3 +168,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3449748681253332531}
   m_Enabled: 1
+--- !u!114 &2010857318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449748681253332531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5bd3152ea2378940bad0cbd7445b02d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayLength: 5
+  layerMaskInteract:
+    serializedVersion: 2
+    m_Bits: 64
+  excludeLayerName: 
+  openDoorKey: 323
+  crosshair: {fileID: 0}

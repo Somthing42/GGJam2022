@@ -417,7 +417,9 @@ MonoBehaviour:
   - {fileID: 0}
   specialLines:
   - {fileID: 0}
+  textBackground: {fileID: 0}
   itemNeeded: Orb
+  itemNeededObj: {fileID: 0}
 --- !u!1 &1306444659121423824
 GameObject:
   m_ObjectHideFlags: 0
