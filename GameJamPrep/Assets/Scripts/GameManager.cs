@@ -19,6 +19,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject cutToBlack;
 
+    public GameObject[] stateOneObjects;
+    public GameObject[] stateTwoObjects;
+    public GameObject[] stateThreeObjects;
+    public GameObject[] stateFourObjects;
+
+    private int musicCounter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,16 +53,33 @@ public class GameManager : MonoBehaviour
             doOnce = true;
         }
 
-
+        //stops calling when game ends
+        if (endTimer >= 0)
+        {
+            GameStates();
+        }
+        
+        //if player exists
         if (player)
         {
+            //if 4 quests are completed and the player controller is active
             if (questsCompleated == 4 & player.GetComponent<PlayerController>().enabled == true)
             {
                 endTimer -= Time.deltaTime;
 
+                if (musicCounter == 0)
+                {
+                    SoundManager.Instance.PlayMusic(SoundManager.Instance.music[1]);
+                    musicCounter += 1;
+                }
+                
+              SoundManager.Instance.MusicSource.volume += (Time.deltaTime/2);
+
+                //cut to black
                 if (endTimer <= 5)
                 {
                     cutToBlack.SetActive(true);
+                    SoundManager.Instance.MusicSource.Stop();
                 }
 
                 if (endTimer <= 0)
@@ -74,4 +98,42 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Ending");
         
     }
+
+    void GameStates()
+    {
+
+        if (questsCompleated == 1)
+        {
+            //activate state one objects
+            foreach (GameObject obj in stateOneObjects)
+            {
+                obj.SetActive(true);
+            }
+        }
+        if (questsCompleated == 2)
+        {
+            //activate state two objects
+            foreach (GameObject obj in stateTwoObjects)
+            {
+                obj.SetActive(true);
+            }
+        }
+        if (questsCompleated == 3)
+        {
+            //activate state three objects
+            foreach (GameObject obj in stateThreeObjects)
+            {
+                obj.SetActive(true);
+            }
+        }
+        if (questsCompleated == 4)
+        {
+            //activate state four objects
+            foreach (GameObject obj in stateFourObjects)
+            {
+                obj.SetActive(true);
+            }
+        }
+    }
+
 }
