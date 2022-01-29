@@ -8,6 +8,8 @@ public class NpcDialogue : MonoBehaviour
     public GameObject[] npcLines;
     //lines when the player helps them
     public GameObject[] specialLines;
+
+    public GameObject textBackground;
     // the current line that is active
     private int currentLine;
     //the previous line that was said.
@@ -15,14 +17,19 @@ public class NpcDialogue : MonoBehaviour
     //the help that the player needs to do
     public string itemNeeded;
 
+    public GameObject itemNeededObj;
+
     private bool npcHelped = false;
 
     private GameObject player;
+
+    private bool doOnce = false;
 
     public void playDialogue()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<PlayerController>().enabled = false;
+        textBackground.SetActive(true);
         npcHelp();
 
         int dialogueLength;
@@ -50,6 +57,7 @@ public class NpcDialogue : MonoBehaviour
                 currentLine = 0;
                 lastLine = -1;
                 player.GetComponent<PlayerController>().enabled = true;
+                textBackground.SetActive(false);
             }
         }
         else
@@ -75,6 +83,11 @@ public class NpcDialogue : MonoBehaviour
                 currentLine = 0;
                 lastLine = -1;
                 player.GetComponent<PlayerController>().enabled = true;
+                textBackground.SetActive(false);
+                if (!itemNeededObj.activeInHierarchy)
+                {
+                    itemNeededObj.SetActive(true);
+                }
             }
         }
         //check which line the npc is on
@@ -84,16 +97,22 @@ public class NpcDialogue : MonoBehaviour
 
     public void npcHelp()
     {
-       // if (itemNeeded == "needs orb")
-       // {
+      
             player = GameObject.FindGameObjectWithTag("Player");
 
             if(player.GetComponent<Inventory>().items.Contains(itemNeeded))
             {
                // Debug.Log("has orb");
                 npcHelped = true;
-                //add thing later that this npc has been helped in the game manager
+               //add thing later that this npc has been helped in the game manager
+               if (!doOnce)
+               {
+                GameManager.instance.questsCompleated += 1;
+                doOnce = true;
+               }   
+                
+
             }
-       // }
+    
     }
 }
