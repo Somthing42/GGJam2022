@@ -485,11 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc24697f0384a5948aaab064c3576d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrayIdx: 0
-  Type:
-  - Door
-  - Item
-  - Npc
+  interactableType: Door
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1099,10 @@ PrefabInstance:
     - target: {fileID: 1306444658426103514, guid: 211e526bffa8bba44b1a5d93551b5285, type: 3}
       propertyPath: m_Name
       value: Greg
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306444658426103516, guid: 211e526bffa8bba44b1a5d93551b5285, type: 3}
+      propertyPath: interactableType
+      value: Npc
       objectReference: {fileID: 0}
     - target: {fileID: 1306444658426103517, guid: 211e526bffa8bba44b1a5d93551b5285, type: 3}
       propertyPath: npcLines.Array.data[0]

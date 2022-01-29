@@ -398,11 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc24697f0384a5948aaab064c3576d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrayIdx: 2
-  Type:
-  - Door
-  - Item
-  - Npc
+  interactableType: Npc
 --- !u!114 &1306444658426103517
 MonoBehaviour:
   m_ObjectHideFlags: 0

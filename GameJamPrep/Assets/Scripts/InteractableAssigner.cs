@@ -6,12 +6,7 @@ using UnityEngine;
 public class InteractableAssigner : MonoBehaviour
 {
     
-    // public string interactableType;
-
-    [HideInInspector]
-    public int arrayIdx = 0;
-    [HideInInspector]
-    public string[] Type = new string[] { "Door", "Item","Npc"};
+    public string interactableType;
 
 
     // Start is called before the first frame update
@@ -29,17 +24,17 @@ public class InteractableAssigner : MonoBehaviour
     //selects the function to do based on what the object is
     public void ItemFunction()
     {
-        if (arrayIdx == 0)
+        if (interactableType == "Door")
         {
             gameObject.GetComponentInParent<DoorController>().PlayAnimation();
         }
-        if (arrayIdx == 1)
+        if (interactableType == "Item")
         {
             
             //call the item function
             gameObject.GetComponent<ItemPickUp>().PickedUp();
         }
-        if (arrayIdx == 2)
+        if (interactableType == "Npc")
         {
             gameObject.GetComponent<NpcDialogue>().playDialogue();
         }
