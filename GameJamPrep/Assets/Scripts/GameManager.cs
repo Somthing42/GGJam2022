@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     private bool doOnce = false;
 
+    public GameObject cutToBlack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +52,11 @@ public class GameManager : MonoBehaviour
             if (questsCompleated == 4 & player.GetComponent<PlayerController>().enabled == true)
             {
                 endTimer -= Time.deltaTime;
+
+                if (endTimer <= 5)
+                {
+                    cutToBlack.SetActive(true);
+                }
 
                 if (endTimer <= 0)
                 {

@@ -6,8 +6,11 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource EffectsSource;
     public AudioSource MusicSource;
-    public static SoundManager Instance; 
+    public static SoundManager Instance;
     // Start is called before the first frame update
+
+    public AudioClip[] music;
+
     void Start()
     {
         if (Instance == null)
@@ -22,6 +25,8 @@ public class SoundManager : MonoBehaviour
 
         //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad(gameObject);
+
+        PlayMusic(music[0]);
     }
 
     // Update is called once per frame
