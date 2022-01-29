@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
 
     private GameObject player;
 
+    public GameObject littleGirl;
+
+    private bool doOnce = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (questsCompleated == 3 & doOnce == false)
+        {
+            littleGirl.SetActive(true);
+            doOnce = true;
+        }
+
+
         if (player)
         {
             if (questsCompleated == 4 & player.GetComponent<PlayerController>().enabled == true)

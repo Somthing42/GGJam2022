@@ -183,7 +183,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5287160541400789886}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.11, y: 1.75, z: -2.775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -298,9 +298,10 @@ GameObject:
   - component: {fileID: 3714014186447557258}
   - component: {fileID: 7081878238129349916}
   - component: {fileID: 1408180764319035272}
-  m_Layer: 0
+  - component: {fileID: 345819945}
+  m_Layer: 6
   m_Name: Door
-  m_TagString: Door
+  m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,6 +382,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &345819945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6273139146594920333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc24697f0384a5948aaab064c3576d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableType: Door
 --- !u!1 &7019186675307963219
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4424328145846427195}
   - component: {fileID: 5078357664990197892}
+  - component: {fileID: 6875880422721040029}
   m_Layer: 0
   m_Name: DoorHinge
   m_TagString: Untagged
@@ -432,6 +447,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6875880422721040029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7019186675307963219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd17217c41313024c8021d7196ad577e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7726022824425965116
 GameObject:
   m_ObjectHideFlags: 0

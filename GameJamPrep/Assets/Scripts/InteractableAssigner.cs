@@ -38,6 +38,10 @@ public class InteractableAssigner : MonoBehaviour
         {
             gameObject.GetComponent<NpcDialogue>().playDialogue();
         }
+        if (interactableType == "Tombstone")
+        {
+            gameObject.GetComponent<Tombstone>().TombstoneInteract();
+        }
     }
 
 
