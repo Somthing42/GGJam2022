@@ -25,6 +25,10 @@ public class NpcDialogue : MonoBehaviour
 
     private bool doOnce = false;
 
+    public AudioClip gregTalk;
+
+    public AudioClip girlTalk;
+
     public void playDialogue()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -34,6 +38,10 @@ public class NpcDialogue : MonoBehaviour
 
         int dialogueLength;
         
+
+       
+
+
         if (npcHelped)
         {
             dialogueLength = specialLines.Length;
@@ -50,6 +58,14 @@ public class NpcDialogue : MonoBehaviour
 
                 currentLine += 1;
                 lastLine += 1;
+                if (gameObject.name == "Girl")
+                {
+                    SoundManager.Instance.Play(girlTalk);
+                }
+                else
+                {
+                    SoundManager.Instance.Play(gregTalk);
+                }
             }
             else
             {
@@ -76,6 +92,14 @@ public class NpcDialogue : MonoBehaviour
 
                 currentLine += 1;
                 lastLine += 1;
+                if (gameObject.name == "Girl")
+                {
+                    SoundManager.Instance.Play(girlTalk);
+                }
+                else
+                {
+                    SoundManager.Instance.Play(gregTalk);
+                }
             }
             else
             {
