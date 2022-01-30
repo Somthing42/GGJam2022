@@ -19,10 +19,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject cutToBlack;
 
-    public GameObject[] stateOneObjects;
-    public GameObject[] stateTwoObjects;
-    public GameObject[] stateThreeObjects;
-    public GameObject[] stateFourObjects;
+    public GameObject stateOneObjects;
+    public GameObject stateTwoObjects;
+    public GameObject stateThreeObjects;
+    public GameObject stateFourObjects;
 
     private int musicCounter = 0;
 
@@ -111,34 +111,22 @@ public class GameManager : MonoBehaviour
         if (questsCompleated == 1)
         {
             //activate state one objects
-            foreach (GameObject obj in stateOneObjects)
-            {
-                obj.SetActive(true);
-            }
+            stateOneObjects.SetActive(true);
         }
         if (questsCompleated == 2)
         {
             //activate state two objects
-            foreach (GameObject obj in stateTwoObjects)
-            {
-                obj.SetActive(true);
-            }
+            stateTwoObjects.SetActive(true);
         }
         if (questsCompleated == 3)
         {
             //activate state three objects
-            foreach (GameObject obj in stateThreeObjects)
-            {
-                obj.SetActive(true);
-            }
+            stateThreeObjects.SetActive(true);
         }
         if (questsCompleated == 4)
         {
             //activate state four objects
-            foreach (GameObject obj in stateFourObjects)
-            {
-                obj.SetActive(true);
-            }
+            stateFourObjects.SetActive(true);
         }
     }
 
