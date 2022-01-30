@@ -12246,7 +12246,7 @@ PrefabInstance:
       objectReference: {fileID: 1484111270}
     - target: {fileID: 8050568399226226538, guid: 3dae5537268440e40a8920926fa09bdf, type: 3}
       propertyPath: questsCompleated
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8050568399226226538, guid: 3dae5537268440e40a8920926fa09bdf, type: 3}
       propertyPath: stateFiveObjects

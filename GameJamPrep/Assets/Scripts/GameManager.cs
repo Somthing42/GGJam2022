@@ -27,8 +27,11 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] postVolumes;
 
+    public GameObject[] hellSounds;
+
     private int musicCounter = 0;
 
+    public GameObject ChewSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +82,7 @@ public class GameManager : MonoBehaviour
                 if (musicCounter == 0)
                 {
                     SoundManager.Instance.PlayMusic(SoundManager.Instance.music[1]);
+                    
                     musicCounter += 1;
                 }
                 
@@ -117,6 +121,7 @@ public class GameManager : MonoBehaviour
             stateOneObjects.SetActive(true);
             postVolumes[0].SetActive(false);
             postVolumes[1].SetActive(true);
+            hellSounds[1].SetActive(true);
         }
         if (questsCompleated == 2)
         {
@@ -124,6 +129,7 @@ public class GameManager : MonoBehaviour
             stateTwoObjects.SetActive(true);
             postVolumes[1].SetActive(false);
             postVolumes[2].SetActive(true);
+            hellSounds[2].SetActive(true);
         }
         if (questsCompleated == 3)
         {
@@ -131,6 +137,7 @@ public class GameManager : MonoBehaviour
             stateThreeObjects.SetActive(true);
             postVolumes[2].SetActive(false);
             postVolumes[3].SetActive(true);
+            hellSounds[3].SetActive(true);
         }
         if (questsCompleated == 4)
         {
@@ -138,12 +145,15 @@ public class GameManager : MonoBehaviour
             stateFourObjects.SetActive(true);
             postVolumes[3].SetActive(false);
             postVolumes[4].SetActive(true);
+            hellSounds[4].SetActive(true);
         }
         if (questsCompleated == 5)
         {
             //activate state four objects
             stateFiveObjects.SetActive(true);
-            
+            hellSounds[5].SetActive(true);
+            ChewSound.SetActive(true);
+
         }
     }
 
