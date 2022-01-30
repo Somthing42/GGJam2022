@@ -168,16 +168,16 @@ MonoBehaviour:
     value: -21.6
   tint:
     overrideState: 1
-    value: 0
+    value: 3
   colorFilter:
     overrideState: 1
     value: {r: 1, g: 0.75, b: 0.75, a: 1}
   hueShift:
     overrideState: 1
-    value: 0
+    value: 13
   saturation:
     overrideState: 1
-    value: 72.3
+    value: 2
   brightness:
     overrideState: 0
     value: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
     value: -0.5
   contrast:
     overrideState: 1
-    value: 44.8
+    value: 39
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
