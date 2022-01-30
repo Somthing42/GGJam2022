@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject stateTwoObjects;
     public GameObject stateThreeObjects;
     public GameObject stateFourObjects;
+    public GameObject stateFiveObjects;
 
     public GameObject[] postVolumes;
 
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         }
 
-        if (questsCompleated == 3 & doOnce == false)
+        if (questsCompleated == 4 & doOnce == false)
         {
             littleGirl.SetActive(true);
             doOnce = true;
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour
         if (player)
         {
             //if 4 quests are completed and the player controller is active
-            if (questsCompleated == 4 & player.GetComponent<PlayerController>().enabled == true)
+            if (questsCompleated == 5 & player.GetComponent<PlayerController>().enabled == true)
             {
                 endTimer -= Time.deltaTime;
 
@@ -137,6 +138,12 @@ public class GameManager : MonoBehaviour
             stateFourObjects.SetActive(true);
             postVolumes[3].SetActive(false);
             postVolumes[4].SetActive(true);
+        }
+        if (questsCompleated == 5)
+        {
+            //activate state four objects
+            stateFiveObjects.SetActive(true);
+            
         }
     }
 
