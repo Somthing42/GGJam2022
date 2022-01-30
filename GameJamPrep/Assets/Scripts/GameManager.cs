@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public GameObject stateThreeObjects;
     public GameObject stateFourObjects;
 
+    public GameObject[] postVolumes;
+
     private int musicCounter = 0;
 
     // Start is called before the first frame update
@@ -112,21 +114,29 @@ public class GameManager : MonoBehaviour
         {
             //activate state one objects
             stateOneObjects.SetActive(true);
+            postVolumes[0].SetActive(false);
+            postVolumes[1].SetActive(true);
         }
         if (questsCompleated == 2)
         {
             //activate state two objects
             stateTwoObjects.SetActive(true);
+            postVolumes[1].SetActive(false);
+            postVolumes[2].SetActive(true);
         }
         if (questsCompleated == 3)
         {
             //activate state three objects
             stateThreeObjects.SetActive(true);
+            postVolumes[2].SetActive(false);
+            postVolumes[3].SetActive(true);
         }
         if (questsCompleated == 4)
         {
             //activate state four objects
             stateFourObjects.SetActive(true);
+            postVolumes[3].SetActive(false);
+            postVolumes[4].SetActive(true);
         }
     }
 
