@@ -35401,6 +35401,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7652711088067870187, guid: 19aa64afd28ef9f48b70a907159de153, type: 3}
   m_PrefabInstance: {fileID: 6432738}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1331179145
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5236450623014726100, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_Name
+      value: HellSounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6149856368158494624, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 537ee7cd9b89ce448b13b7517c5e9d1a, type: 3}
 --- !u!1001 &1332886083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36750,6 +36807,10 @@ PrefabInstance:
       propertyPath: stateThreeObjects
       value: 
       objectReference: {fileID: 1637223105}
+    - target: {fileID: 8050568399226226538, guid: 3dae5537268440e40a8920926fa09bdf, type: 3}
+      propertyPath: hellSounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050568399226226538, guid: 3dae5537268440e40a8920926fa09bdf, type: 3}
       propertyPath: postVolumes.Array.size
       value: 6
