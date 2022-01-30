@@ -47,6 +47,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
+        }
+
         if (questsCompleated == 3 & doOnce == false)
         {
             littleGirl.SetActive(true);
